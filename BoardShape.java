@@ -1,4 +1,4 @@
-package peggame;
+package peggame2;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -11,7 +11,11 @@ public class BoardShape {
         this.filename = filename;
     }
 
-
+    /**
+     * This method is responsible for creating an instance of a square peg game with a board
+     * @return gameWithBoard
+     * @throws IOException
+     */
     public PegGame readFromFile() throws IOException {
         SquarePegGame gameWithBoard;
         try (FileReader fileReader = new FileReader(filename);
