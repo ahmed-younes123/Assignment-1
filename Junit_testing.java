@@ -3,6 +3,8 @@ package peggame;
 import static org.junit.Assert.assertEquals;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collection;
 
 import org.junit.Test;
 
@@ -59,10 +61,17 @@ public class Junit_testing {
     }
 
     public void movesTest() throws IOException{
-
-        PegGame square_1 = new BoardShape("null").readFromFile();
-
-        assertEquals(arr,actual.getBoard());
+        /*make 3 by 3 file with this shape  to test this
+        oo.
+        o.o
+        o.o
+        */
+        PegGame square_1 = new BoardShape("replace this with file path").readFromFile();
+        
+        Collection<Move> collection = new ArrayList<>();
+        Move move =new Move(new Location(0, 0),new Location(0, 2));
+        collection.add(move);
+        assertEquals(collection,square_1.getPossibleMoves());
 
     }
 
